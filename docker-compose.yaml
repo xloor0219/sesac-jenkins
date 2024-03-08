@@ -1,0 +1,11 @@
+version: "0.1"
+services :
+  sesac-torch:
+    image : sesac-torch:0.0.1
+    ports : 
+      - 8888:5000
+    volumes : 
+      - /Users/sumin/Documents/sesac/docker:/home
+    environment:
+      - STAGE = DEV
+
