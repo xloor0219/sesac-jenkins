@@ -1,7 +1,7 @@
 FROM pytorch/pytorch
 LABEL developer="Sumin Yang <ysm0482@naver.com>"
 
-WORKDIR /home
+#WORKDIR /home
 
 COPY ./requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
