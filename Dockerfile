@@ -4,6 +4,7 @@ ENV USER_DIR=/workspace
 ENV WORK_DIR=/home
 
 WORKDIR ../
+RUN pwd
 RUN ls -als
 
 WORKDIR $WORK_DIR
