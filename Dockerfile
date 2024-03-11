@@ -1,14 +1,13 @@
 FROM pytorch/pytorch
 LABEL developer="Sumin Yang <ysm0482@naver.com>"
-#ENV USER_DIR=/var/jenkins_home
-#ENV WORK_DIR=/home
+ENV USER_DIR=/workspace
+ENV WORK_DIR=/home
 
-#WORKDIR $WORK_DIR
-RUN pwd
-RUN ls -als /
-RUN cat /etc/*release*
+RUN ls -als
 
-#COPY $USER_DIR/requirements.txt ./requirements.txt
+WORKDIR $WORK_DIR
+
+COPY $USER_DIR/requirements.txt ./requirements.txt
 RUN pip install -r ./requirements.txt
 
 EXPOSE 5000
