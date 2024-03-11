@@ -4,7 +4,7 @@ LABEL developer="Sumin Yang <ysm0482@naver.com>"
 #ENV WORK_DIR=/home
 
 #WORKDIR $WORK_DIR
-#RUN ls -als $USER_DIR
+RUN pwd
 
 #COPY $USER_DIR/requirements.txt ./requirements.txt
 RUN pip install -r ./requirements.txt
