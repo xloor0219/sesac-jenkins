@@ -3,6 +3,7 @@ LABEL developer="Sumin Yang <ysm0482@naver.com>"
 ENV USER_DIR=/workspace
 ENV WORK_DIR=/home
 
+WORKDIR ../
 RUN ls -als
 
 WORKDIR $WORK_DIR
