@@ -1,11 +1,13 @@
+RUN pwd
+RUN ls -als ./
+
+
 FROM pytorch/pytorch
 LABEL developer="Sumin Yang <ysm0482@naver.com>"
 ENV USER_DIR=/workspace
 ENV WORK_DIR=/home
 
 WORKDIR ../var
-RUN pwd
-RUN ls -als
 
 WORKDIR $WORK_DIR
 
