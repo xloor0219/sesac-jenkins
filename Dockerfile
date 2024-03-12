@@ -4,15 +4,11 @@ LABEL developer="Sumin Yang <ysm0482@naver.com>"
 RUN pwd
 RUN ls -als .
 
-ENV USER_DIR=/workspace
 ENV WORK_DIR=/home
 
-WORKDIR ../var
-CMD ls -als .
-
+COPY ./requirements.txt $WORK_DIR/requirements.txt
 WORKDIR $WORK_DIR
 
-COPY $USER_DIR/requirements.txt ./requirements.txt
 RUN pip install -r ./requirements.txt
 
 EXPOSE 5000
