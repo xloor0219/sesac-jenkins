@@ -6,7 +6,6 @@ RUN ls -als .
 
 ENV WORK_DIR=/home
 
-RUN ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 COPY ./requirements.txt $WORK_DIR/requirements.txt
 WORKDIR $WORK_DIR
 
