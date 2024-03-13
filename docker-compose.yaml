@@ -1,7 +1,7 @@
 version: "0.1"
 services :
   sesac-torch:
-    image : sesac-torch
+    image : ysm2820/sesac-torch
     ports : 
       - 8888:5000
     volumes : 
